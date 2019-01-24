@@ -1,15 +1,15 @@
 // The Vue build version to load with the `import` command
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
-import Vue from 'vue'
-import App from './App'
-import router from './router'
-import store from './store'
-import iView from 'iview'
-import i18n from '@/locale'
-import config from '@/config'
-import importDirective from '@/directive'
-import 'iview/dist/styles/iview.css'
-import './index.less'
+import Vue from 'vue' // @haidong vue源码
+import App from './App' // @haidong 主容器
+import router from './router' // @haidong 路由规则
+import store from './store' // @haidong 全局store
+import iView from 'iview' // @haidong iview组件
+import i18n from '@/locale'  // @haidong 
+import config from '@/config'  // @haidong 全局配置
+import importDirective from '@/directive' // @haidong 
+import 'iview/dist/styles/iview.css' // @haidong 全局css
+import './index.less'  // @haidong 主容器css
 import '@/assets/icons/iconfont.css'
 // import '@/mock'
 // 实际打包时应该不引入mock

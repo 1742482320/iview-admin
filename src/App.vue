@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <!-- @haidong 路由所匹配的组件 -->
     <router-view/>
   </div>
 </template>

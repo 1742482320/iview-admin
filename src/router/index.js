@@ -1,20 +1,20 @@
-import Vue from 'vue'
-import Router from 'vue-router'
-import routes from './routers'
-import store from '@/store'
-import iView from 'iview'
+import Vue from 'vue' // @haidong vue源码
+import Router from 'vue-router' // @haidong vue-router源码
+import routes from './routers' // @haidong 路由规则对象
+import store from '@/store' // @haidong 全局store
+import iView from 'iview' // @haidong iview组件
 import { getToken, canTurnTo } from '@/libs/util'
 
-Vue.use(Router)
-const router = new Router({
+Vue.use(Router) // @haidong 在vue中需要先use
+const router = new Router({ // @haidong 实例化一个路由对象
   routes,
-  mode: 'history'
+  mode: 'history' // @haidong history模式
 })
-const LOGIN_PAGE_NAME = 'login'
+const LOGIN_PAGE_NAME = 'login' // @haidong 登录页面
 
-router.beforeEach((to, from, next) => {
-  iView.LoadingBar.start()
-  const token = getToken()
+router.beforeEach((to, from, next) => { // @haidong 跳转规则
+  iView.LoadingBar.start() // @haidong 加载动画
+  const token = getToken() // @haidong 获取权限
   if (!token && to.name !== LOGIN_PAGE_NAME) {
     // 未登录且要跳转的页面不是登录页
     next({
