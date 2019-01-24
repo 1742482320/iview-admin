@@ -3,7 +3,7 @@ import Router from 'vue-router' // @haidong vue-router源码
 import routes from './routers' // @haidong 路由规则对象
 import store from '@/store' // @haidong 全局store
 import iView from 'iview' // @haidong iview组件
-import { getToken, canTurnTo } from '@/libs/util'
+import { getToken, canTurnTo } from '@/libs/util' // @haidong 判断是否登录与用户是否有权限跳到该页
 
 Vue.use(Router) // @haidong 在vue中需要先use
 const router = new Router({ // @haidong 实例化一个路由对象

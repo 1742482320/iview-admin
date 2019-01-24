@@ -9,6 +9,7 @@ export const setToken = (token) => {
   Cookies.set(TOKEN_KEY, token, {expires: config.cookieExpires || 1})
 }
 
+ // @haidong 判断是否登录
 export const getToken = () => {
   const token = Cookies.get(TOKEN_KEY)
   if (token) return token
