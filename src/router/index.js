@@ -1,9 +1,9 @@
-import Vue from 'vue'
-import Router from 'vue-router'
-import routes from './routers'
-import store from '@/store'
-import iView from 'iview'
-import { getToken, canTurnTo } from '@/libs/util'
+import Vue from 'vue'             // @haidong 引入vue源码
+import Router from 'vue-router'   // @haidong 引入vue路由
+import routes from './routers'    // @haidong 引入页面路由对象
+import store from '@/store'       // @haidong 全局store
+import iView from 'iview'         // @haidong iview组件
+import { getToken, canTurnTo } from '@/libs/util'    // @haidong 
 
 Vue.use(Router)
 const router = new Router({
@@ -12,6 +12,7 @@ const router = new Router({
 })
 const LOGIN_PAGE_NAME = 'login'
 
+// @haidong 页面跳转的方法
 router.beforeEach((to, from, next) => {
   iView.LoadingBar.start()
   const token = getToken()
