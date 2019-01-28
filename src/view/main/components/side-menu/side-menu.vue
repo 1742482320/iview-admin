@@ -1,5 +1,6 @@
 <template>
   <div class="side-menu-wrapper">
+    <!-- @ haidong 插槽 -->
     <slot></slot>
     <Menu ref="menu" v-show="!collapsed" :active-name="activeName" :open-names="openedNames" :accordion="accordion" :theme="theme" width="auto" @on-select="handleSelect">
       <template v-for="item in menuList">
